@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gravitational Waves</title>
+
+  <style>
+    
+  @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+      body {
+        margin: 0;
+        font-family:  'Open Sans', Arial, Helvetica, sans-serif, sans-serif, sans-serif;
+        background-color: black;
+        color: white;
+      }
+      
+      
+
+    .overlay-text {
+      position: absolute;
+      line-height: 1.5;
+      top: 20%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      color: white;
+      text-shadow: 0 0 15px black;
+      font-size: 1rem;
+      text-align: left;
+      width: 25%;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.8s ease-out;
+    }
+
+    .overlay-textT {
+      position: absolute;
+      line-height: 1.5;
+      top: 20%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      color: white;
+      text-shadow: 0 0 15px black;
+      font-size: 1rem;
+      text-align: right;
+      width: 27%;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.8s ease-out;
+    }
+
+    .paragraph {
+      top: 80%;
+      left: 80%;
+      width: 25%;
+      text-align: right;
+    }
+
+    .fade-visible {
+      opacity: 1;
+    }
+
+    .image-section {
+      position: relative;
+      text-align: center;
+    }
+
+    .image-section video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .image-section-small {
+      position: relative;
+      z-index: 5;
+      margin-top: -140px;
+    }
+
+    .image-section-small video {
+      width: 100%;
+      box-shadow: 0 0 40px rgba(0,0,0,0.8);
+    }
+
+    #zoom-wrapper,
+    #smalltext-wrapper {
+      position: relative;
+    }
+
+    #zoom-wrapper { height: 10000px; }
+    #smalltext-wrapper { height: 6000px; }
+
+    #zoom-scrolly,
+    #smalltext-scrolly {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background: black;
+      overflow: hidden;
+    }
+
+    #zoom-scrolly video,
+    #zoom-scrolly canvas,
+    #smalltext-scrolly video,
+    #smalltext-scrolly canvas {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      display: block;
+    }
+
+    .end-spacer {
+      height: 5vh;
+      background: black;
+    }
+
+    /* WAVE TEXT */
+    .wave-text span {
+      display: inline-block;
+      animation: wave 3.5s ease-in-out infinite;
+    }
+
+    @keyframes wave {
+      0%   { transform: translateY(0); opacity: 0.7; }
+      50%  { transform: translateY(-8px); opacity: 1; }
+      100% { transform: translateY(0); opacity: 0.7; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 1 -->
+  <div class="image-section">
+    <video src="img/Stretching_.mp4" autoplay muted loop playsinline></video>
+  </div>
+
+  <!-- 2 -->
+  <div class="image-section">
+    <video src="img/HalfToneWaves+Orbit.mp4" autoplay muted loop playsinline></video>
+    <div class="overlay-text">
+      <strong>TWO BLACK HOLES ORBIT</strong><br><br>
+      When two black holes orbit each other, moving closer and closer until they finally collide and merge into
+      <strong>one larger black hole</strong>. During this powerful event, enormous energy is released; not as light,
+      but as ripples in space itself, called <strong>gravitational waves</strong>.
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="image-section-small">
+    <video src="img/LittlePictureAnim.mp4" autoplay muted loop playsinline></video>
+    <div class="overlay-textT">
+      <strong>STRETCHING AND SQUEEZING</strong><br><br>
+      Gravitational waves gently stretch and squeeze spacetime.
+      <strong>The amount of this stretching and squeezing</strong>, called the <strong>strain h</strong>, is incredibly
+      <strong>tiny</strong>.
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="image-section">
+    <video src="img/RipplesInEarthReverse.mp4" autoplay muted loop playsinline></video>
+    <div class="overlay-text">
+      <strong>GRAVITATIONAL WAVES EVERYWHERE</strong><br><br>
+      Gravitational waves <strong>spread</strong> and go through the entire universe, passing stars, planets, and even people; stretching and squeezing space itself <br>as they go.
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="image-section">
+    <video src="img/But how_.mp4" autoplay muted loop playsinline></video>
+  </div>
+
+  <!-- 6 -->
+  <div id="smalltext-wrapper">
+    <div id="smalltext-scrolly">
+      <div class="overlay-text fade-visible">
+        <strong>VERY, VERY, VERY SMALL</strong><br><br>
+        The LIGO detectors measure a stretching & squeezing smaller than a billionth of an atom’s diameter. Over a 4-kilometer arm, the length changes by less than a thousandth of a proton’s width. 
+      </div>
+
+      <div class="overlay-text paragraph fade-visible">
+        <strong>WHAT IS STRAIN h?</strong><br><br>
+        Strain h is not a distance.
+        It compares how much space stretches to how large that space already is.
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div id="zoom-wrapper">
+    <div id="zoom-scrolly">
+      <div class="overlay-text fade-visible">
+        <strong>FROM THE EARTH TO THE SUN</strong><br><br>
+        If you take the distance from Earth to the Sun — about 150 million kilometers — <br> a passing gravitational wave would stretch and squeeze that distance by only about the width of a single human hair. That tiny change shows just how incredibly subtle gravitational waves are.
+      </div>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="image-section">
+    <video src="img/TheEinsteinTelescope.mp4" autoplay muted loop playsinline></video>
+    <div class="overlay-textT">
+      <strong>EVEN MORE PRECISE</strong><br><br>
+      The Einstein Telescope is a <strong>underground observatory</strong>  designed to detect gravitational waves, tiny ripples in space and time caused by extreme cosmic events such as merging black holes. Thanks to its large scale, triangular design, and highly sensitive technology, it will be able to listen to the universe with <strong> greater precision</strong> than current detectors, providing new insights into the origin and <br>behavior of the cosmos. </div>
+  </div>
+
+  <!-- WAVE QUESTION -->
+  <div class="image-section">
+    <div class="overlay-text wave-text fade-visible"
+         data-text="but how small is the stretching and squeezing?">
+    </div>
+  </div>
+
+  <div class="end-spacer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/scrolly-video/dist/scrolly-video.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const texts = document.querySelectorAll(".overlay-text, .overlay-textT");
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          entry.target.classList.toggle("fade-visible", entry.isIntersecting);
+        });
+      }, { threshold: 0.5 });
+
+      texts.forEach(t => observer.observe(t));
+
+      new ScrollyVideo({
+        scrollyVideoContainer: 'zoom-scrolly',
+        src: 'img/ZOOMhair.mp4',
+        trackScroll: true,
+        sticky: true,
+        cover: true
+      });
+
+      new ScrollyVideo({
+        scrollyVideoContainer: 'smalltext-scrolly',
+        src: 'img/SmallText2.mp4',
+        trackScroll: true,
+        sticky: true,
+        cover: true
+      });
+
+   
+    });
+  </script>
+
+</body>
+</html>
